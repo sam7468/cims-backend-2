@@ -9,7 +9,7 @@ export const cimsGet = async(req, res)=>{
     }
 }
 
-
+//new
 export const cimsPost = async(req, res)=>{
     const {designation, brandname, clientname, domain, baselocation,pincode,country,state,district,city,addressLine1,addressLine2,landmark,contacts}=req.body.formData
     try {
@@ -33,6 +33,7 @@ export const cimsDel =async(req,res)=>{
     }
 }
 
+//new
 export const cimsPatch =async(req,res) =>{
     const {id} = req.query;
     const {designation, brandname, clientname, domain, baselocation,pincode,country,state,district,city,addressLine1,addressLine2,landmark,contacts} = req.body.formData;

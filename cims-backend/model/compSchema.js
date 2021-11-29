@@ -1,4 +1,6 @@
 import mongoose from "mongoose"
+
+//new
 //camel case only for addressLines
 export const compSchema = new mongoose.Schema({
     designation: String,

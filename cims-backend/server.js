@@ -26,7 +26,6 @@ app.use('/cims', cimsRouter)
 
 app.post('/login', (req, res)=>{
     const user = {name: 'dummyuser'}
-
     const token = jsonwebtoken.sign(user,secret_token, {expiresIn: '3600s'})
     res.json({ Token: token})
 
@@ -40,6 +39,7 @@ app.get('/location', async (req, res)=>{
     const fetch_res = await fetch(url)
     const location = await fetch_res.json()
     console.log(location,"for state unf")
+    //new
     const state = location.result[0] ? location.result[0].state : ""
 
         const districts = location.result.reduce(function(result, current) {
@@ -61,6 +61,7 @@ app.get('/countries', async (req, res)=>{
     res.json(countries)
 })
 
+//new
 app.get('/getclientinfo',async(req,res)=>{
     try {
         const clientId = req.headers['id']        
